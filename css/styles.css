@@ -1,0 +1,485 @@
+/* ========================================
+   KES WEBSITE — INITIAL STYLESHEET
+   ======================================== */
+
+:root {
+  --color-background: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-text: #2f332f;
+  --color-muted: #6d746d;
+  --color-green: #5d735f;
+  --color-green-dark: #405443;
+  --color-border: #dfe3dc;
+  --color-soft: #eef1ec;
+
+  --max-width: 1180px;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ========================================
+   BASE
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+.narrow-container {
+  width: min(92%, 820px);
+  margin: 0 auto;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  max-width: 11ch;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.section-intro {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.site-header {
+  background: rgba(247, 245, 239, 0.95);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-brand a {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--color-green-dark);
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 680px;
+  font-size: 1.15rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.35rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary-button {
+  background: var(--color-green-dark);
+  color: white;
+}
+
+.primary-button:hover {
+  background: #314336;
+  transform: translateY(-1px);
+}
+
+.text-link {
+  color: var(--color-green-dark);
+  font-weight: 700;
+}
+
+.credibility-line {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.image-placeholder {
+  min-height: 420px;
+  border-radius: var(--radius);
+  border: 1px dashed #aeb7ad;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(93, 115, 95, 0.08),
+      rgba(93, 115, 95, 0.02)
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ========================================
+   GENERAL SECTIONS
+   ======================================== */
+
+section {
+  padding: 5rem 0;
+}
+
+.recognition,
+.services,
+.why-kes,
+.people {
+  background: var(--color-surface);
+}
+
+.reassurance,
+.how-we-work,
+.testimonials,
+.contact-section {
+  background: var(--color-soft);
+}
+
+/* ========================================
+   RECOGNITION / CHALLENGE CARDS
+   ======================================== */
+
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.challenge-card {
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: white;
+}
+
+.challenge-card p {
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+.featured-card {
+  grid-column: span 3;
+  background: #f4f6f2;
+  border-color: #c8d1c6;
+}
+
+/* ========================================
+   REASSURANCE
+   ======================================== */
+
+.reassurance p {
+  font-size: 1.08rem;
+  color: var(--color-muted);
+}
+
+/* ========================================
+   SERVICES
+   ======================================== */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.service-card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.service-card p {
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+/* ========================================
+   HOW WE WORK
+   ======================================== */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.process-grid article {
+  padding: 1.5rem;
+}
+
+.process-grid p {
+  color: var(--color-muted);
+}
+
+.philosophy-line {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-green-dark);
+}
+
+/* ========================================
+   WHY KES
+   ======================================== */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-content p {
+  color: var(--color-muted);
+}
+
+/* ========================================
+   TESTIMONIALS
+   ======================================== */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* ========================================
+   PEOPLE
+   ======================================== */
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.person-card {
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: white;
+}
+
+.person-role {
+  color: var(--color-green-dark);
+  font-weight: 700;
+}
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-muted);
+}
+
+.contact-section .button {
+  margin-top: 1rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+  background: #2f332f;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+
+  .hero-grid,
+  .two-column,
+  .service-grid,
+  .process-grid,
+  .testimonial-grid,
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-card {
+    grid-column: span 2;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  h1 {
+    max-width: 14ch;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card {
+    grid-column: span 1;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+
+  .image-placeholder {
+    min-height: 300px;
+  }
+}
