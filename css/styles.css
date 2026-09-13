@@ -1,21 +1,22 @@
 /* ========================================
-   KES WEBSITE — INITIAL STYLESHEET
+   KES WEBSITE — BASE DESIGN SYSTEM
    ======================================== */
 
 :root {
   --color-background: #f7f5ef;
   --color-surface: #ffffff;
   --color-text: #2f332f;
-  --color-muted: #6d746d;
+  --color-muted: #687168;
   --color-green: #5d735f;
   --color-green-dark: #405443;
   --color-border: #dfe3dc;
   --color-soft: #eef1ec;
 
-  --max-width: 1180px;
+  --max-width: 1220px;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
+
 
 /* ========================================
    BASE
@@ -31,15 +32,22 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
   background: var(--color-background);
   color: var(--color-text);
   line-height: 1.6;
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 a {
@@ -57,6 +65,7 @@ a {
   margin: 0 auto;
 }
 
+
 /* ========================================
    TYPOGRAPHY
    ======================================== */
@@ -65,19 +74,21 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--color-text);
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4.2vw, 4rem);
-  max-width: 13ch;
-  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 3.75vw, 3.7rem);
+  max-width: 14ch;
+  margin-bottom: 1.15rem;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-size: clamp(2rem, 3.2vw, 3rem);
   margin-bottom: 1rem;
+  letter-spacing: -0.015em;
 }
 
 h3 {
@@ -90,93 +101,129 @@ p {
 }
 
 .eyebrow {
-  margin-bottom: 0.75rem;
-  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-green);
 }
 
 .section-intro {
   max-width: 700px;
+  margin-bottom: 2.5rem;
   font-size: 1.1rem;
   color: var(--color-muted);
-  margin-bottom: 2.5rem;
 }
+
 
 /* ========================================
    HEADER
    ======================================== */
 
 .site-header {
-  background: rgba(247, 245, 239, 0.95);
-  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
+
+  background: rgba(247, 245, 239, 0.96);
+  border-bottom: 1px solid var(--color-border);
+
   backdrop-filter: blur(8px);
 }
 
 .header-inner {
-  min-height: 74px;
+  min-height: 72px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 2rem;
 }
 
 .site-brand a {
   font-size: 1.05rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .main-nav {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+
+  gap: 1.7rem;
+
   font-size: 0.95rem;
+}
+
+.main-nav a {
+  transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
   color: var(--color-green-dark);
 }
 
+
 /* ========================================
    HERO
    ======================================== */
 
 .hero {
-  padding: 4rem 0 3.5rem;
+  padding: 4.2rem 0 4rem;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(380px, 0.92fr);
+
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+
   align-items: center;
 }
 
+.hero-content {
+  min-width: 0;
+}
+
 .hero-text {
-  max-width: 720px;
-  font-size: 1.12rem;
-  color: var(--color-muted);
+  max-width: 700px;
+
   margin-bottom: 1.6rem;
+
+  font-size: 1.1rem;
+  line-height: 1.65;
+
+  color: var(--color-muted);
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
+
   gap: 1.25rem;
+
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1.45rem;
 }
 
 .button {
   display: inline-block;
-  padding: 0.9rem 1.35rem;
+
+  padding: 0.88rem 1.35rem;
+
   border-radius: 8px;
+
   font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .primary-button {
@@ -195,27 +242,41 @@ p {
 }
 
 .credibility-line {
-  font-size: 0.95rem;
+  margin-bottom: 0;
+
+  font-size: 0.93rem;
+
   color: var(--color-muted);
 }
 
+.hero-image {
+  width: 100%;
+}
+
 .image-placeholder {
-  min-height: 380px;
+  width: 100%;
+  min-height: 350px;
+
   border-radius: var(--radius);
   border: 1px dashed #aeb7ad;
+
   background:
     linear-gradient(
       135deg,
       rgba(93, 115, 95, 0.08),
       rgba(93, 115, 95, 0.02)
     );
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-muted);
-  text-align: center;
+
   padding: 2rem;
+
+  text-align: center;
+  color: var(--color-muted);
 }
+
 
 /* ========================================
    GENERAL SECTIONS
@@ -239,33 +300,42 @@ section {
   background: var(--color-soft);
 }
 
+
 /* ========================================
    RECOGNITION / CHALLENGE CARDS
    ======================================== */
 
 .challenge-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.25rem;
 }
 
 .challenge-card {
-  padding: 1.5rem;
+  padding: 1.55rem;
+
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
+
   background: white;
 }
 
 .challenge-card p {
-  color: var(--color-muted);
   margin-bottom: 0;
+
+  color: var(--color-muted);
 }
 
 .featured-card {
   grid-column: span 3;
+
   background: #f4f6f2;
+
   border-color: #c8d1c6;
 }
+
 
 /* ========================================
    REASSURANCE
@@ -273,8 +343,10 @@ section {
 
 .reassurance p {
   font-size: 1.08rem;
+
   color: var(--color-muted);
 }
+
 
 /* ========================================
    SERVICES
@@ -282,23 +354,31 @@ section {
 
 .service-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 1.5rem;
+
   margin-top: 2.5rem;
 }
 
 .service-card {
   padding: 2rem;
+
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
+
   background: white;
+
   box-shadow: var(--shadow);
 }
 
 .service-card p {
-  color: var(--color-muted);
   margin-bottom: 0;
+
+  color: var(--color-muted);
 }
+
 
 /* ========================================
    HOW WE WORK
@@ -306,8 +386,11 @@ section {
 
 .process-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.5rem;
+
   margin-top: 2.5rem;
 }
 
@@ -321,10 +404,13 @@ section {
 
 .philosophy-line {
   margin-top: 2rem;
+
   font-size: 1.15rem;
   font-weight: 700;
+
   color: var(--color-green-dark);
 }
+
 
 /* ========================================
    WHY KES
@@ -332,8 +418,11 @@ section {
 
 .two-column {
   display: grid;
+
   grid-template-columns: 0.9fr 1.1fr;
+
   gap: 4rem;
+
   align-items: center;
 }
 
@@ -341,29 +430,38 @@ section {
   color: var(--color-muted);
 }
 
+
 /* ========================================
    TESTIMONIALS
    ======================================== */
 
 .testimonial-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.5rem;
+
   margin-top: 2.5rem;
 }
 
 blockquote {
   margin: 0;
+
   padding: 2rem;
+
   background: white;
+
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
 }
 
 blockquote p {
   margin-bottom: 0;
+
   font-style: italic;
 }
+
 
 /* ========================================
    PEOPLE
@@ -371,22 +469,29 @@ blockquote p {
 
 .people-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 1.5rem;
+
   margin-top: 2.5rem;
 }
 
 .person-card {
   padding: 2rem;
+
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
+
   background: white;
 }
 
 .person-role {
   color: var(--color-green-dark);
+
   font-weight: 700;
 }
+
 
 /* ========================================
    CONTACT
@@ -398,8 +503,10 @@ blockquote p {
 
 .contact-section p {
   max-width: 700px;
+
   margin-left: auto;
   margin-right: auto;
+
   color: var(--color-muted);
 }
 
@@ -407,14 +514,18 @@ blockquote p {
   margin-top: 1rem;
 }
 
+
 /* ========================================
    FOOTER
    ======================================== */
 
 .site-footer {
-  background: #2f332f;
-  color: white;
   padding: 2rem 0;
+
+  background: #2f332f;
+
+  color: white;
+
   text-align: center;
 }
 
@@ -422,8 +533,34 @@ blockquote p {
   margin: 0;
 }
 
+
 /* ========================================
-   RESPONSIVE
+   LARGE DESKTOP
+   ======================================== */
+
+@media (min-width: 1450px) {
+
+  .hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4.4rem;
+  }
+
+  .hero-grid {
+    gap: 4.75rem;
+  }
+
+  .hero-text {
+    max-width: 680px;
+  }
+
+  .image-placeholder {
+    min-height: 360px;
+  }
+}
+
+
+/* ========================================
+   TABLET / SMALL LAPTOP
    ======================================== */
 
 @media (max-width: 900px) {
@@ -437,14 +574,6 @@ blockquote p {
     grid-template-columns: 1fr;
   }
 
-  .challenge-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .featured-card {
-    grid-column: span 2;
-  }
-
   .hero {
     padding-top: 3rem;
   }
@@ -452,19 +581,54 @@ blockquote p {
   h1 {
     max-width: 16ch;
   }
+
+  .hero-image {
+    max-width: 720px;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-card {
+    grid-column: span 2;
+  }
 }
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
 
 @media (max-width: 650px) {
 
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+
     padding: 1rem 0;
   }
 
   .main-nav {
     flex-wrap: wrap;
+
     gap: 0.75rem 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 11vw, 3.15rem);
+
+    max-width: 12ch;
+  }
+
+  .hero {
+    padding-top: 2.75rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .challenge-grid {
@@ -480,6 +644,6 @@ blockquote p {
   }
 
   .image-placeholder {
-    min-height: 300px;
+    min-height: 280px;
   }
 }
