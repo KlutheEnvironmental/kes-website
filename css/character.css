@@ -103,8 +103,14 @@
 .hero-image img {
   border: 1px solid rgba(199, 163, 76, 0.30);
 }
+.hero-image {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
 .hero-image img {
-  object-position: 42% 45%;
+  transform: scale(1.12);
+  transform-origin: 43% 46%;
 }
 .hero .primary-button {
   box-shadow: 0 8px 18px rgba(64, 84, 67, 0.14);
