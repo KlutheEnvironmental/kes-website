@@ -884,34 +884,163 @@
       class="contact-section"
     >
 
-      <div class="container">
+      <div class="container contact-grid">
 
-        <p class="eyebrow">
-          Start a Conversation
-        </p>
 
-        <h2>
-          Let’s Talk About Your Project
-        </h2>
+        <div class="contact-copy">
 
-        <p>
-          Whether you’re starting with a farm problem, exploring a conservation
-          opportunity, or already have an NRCS contract in hand, you do not need
-          to have everything figured out before you contact us.
-        </p>
+          <p class="eyebrow">
+            Start a Conversation
+          </p>
 
-        <p>
-          Tell us a little about your operation and what you’re trying to
-          accomplish.  We’ll help determine whether KES is the right fit and
-          what the next step may be.
-        </p>
+          <h2>
+            Let’s Talk About Your Project
+          </h2>
 
-        <a
-          class="button primary-button"
-          href="mailto:info@klutheenvironmental.com"
-        >
-          Discuss Your Project
-        </a>
+          <p>
+            Whether you are starting with a problem on the farm, considering a
+            conservation project, or already have an NRCS contract in hand, you
+            do not need to know exactly what service or plan you need before
+            contacting KES.
+          </p>
+
+          <p class="contact-emphasis">
+            Start with what you are trying to accomplish.
+          </p>
+
+          <p>
+            Tell us a little about your operation and what you are working
+            through, and we can talk about the options and what a practical
+            next step might look like.
+          </p>
+
+
+          <div class="direct-contact">
+
+            <span>
+              Prefer email?
+            </span>
+
+            <a href="mailto:info@klutheenvironmental.com">
+              info@klutheenvironmental.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-panel">
+
+          <form
+            id="kes-contact-form"
+            class="contact-form"
+          >
+
+            <div class="form-field">
+
+              <label for="contact-name">
+                Name
+              </label>
+
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="contact-email">
+                Email
+              </label>
+
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="contact-phone">
+                Phone
+                <span class="optional">
+                  Optional
+                </span>
+              </label>
+
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="contact-farm">
+                Farm / Location
+                <span class="optional">
+                  Optional
+                </span>
+              </label>
+
+              <input
+                id="contact-farm"
+                name="farm"
+                type="text"
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="contact-project">
+                What are you working on?
+              </label>
+
+              <textarea
+                id="contact-project"
+                name="project"
+                rows="6"
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              class="button primary-button form-submit"
+              type="submit"
+            >
+              Start the Conversation
+            </button>
+
+
+            <p class="form-note">
+              Submitting this form will open your email program with your
+              information ready to send to KES.
+            </p>
+
+          </form>
+
+        </div>
+
 
       </div>
 
@@ -937,6 +1066,66 @@
     </div>
 
   </footer>
+
+
+
+  <!-- ====================================
+       CONTACT FORM
+       ==================================== -->
+
+  <script>
+
+    const contactForm =
+      document.getElementById("kes-contact-form");
+
+
+    contactForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        const name =
+          document.getElementById("contact-name").value.trim();
+
+        const email =
+          document.getElementById("contact-email").value.trim();
+
+        const phone =
+          document.getElementById("contact-phone").value.trim();
+
+        const farm =
+          document.getElementById("contact-farm").value.trim();
+
+        const project =
+          document.getElementById("contact-project").value.trim();
+
+
+        const subject =
+          "KES Website Project Inquiry - " + name;
+
+
+        const body =
+          "Name: " + name + "\n\n" +
+          "Email: " + email + "\n\n" +
+          "Phone: " + (phone || "Not provided") + "\n\n" +
+          "Farm / Location: " + (farm || "Not provided") + "\n\n" +
+          "What I am working on:\n" + project;
+
+
+        const mailtoLink =
+          "mailto:info@klutheenvironmental.com" +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+
+
+        window.location.href = mailtoLink;
+
+      }
+    );
+
+  </script>
 
 
 </body>
