@@ -157,8 +157,10 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+grid-template-columns:
+  minmax(0, 1fr)
+  minmax(430px, 1fr);
+   gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: center;
 }
 
