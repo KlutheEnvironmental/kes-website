@@ -120,21 +120,30 @@
    ======================================== */
 
 /*
-   Keep the copyright on the left and present LinkedIn in the conventional
-   compact icon treatment on the far right.
+   Keep the copyright truly centered in the full footer width while the
+   LinkedIn icon remains independently aligned to the far right.
 */
 .site-footer .container p {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
+  min-height: 30px;
   margin: 0;
   font-size: 0;
 }
 
 .site-footer .container p::before {
   content: "© Kluthe Environmental Solutions, LLC";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: calc(100% - 90px);
   font-size: 0.92rem;
+  text-align: center;
 }
 
 .site-footer .container p a {
@@ -144,6 +153,7 @@
   width: 30px;
   height: 30px;
   flex: 0 0 30px;
+  margin-left: auto;
   border-radius: 4px;
   background: #0a66c2;
   color: #ffffff;
@@ -187,6 +197,7 @@
   }
 
   .site-footer .container p::before {
+    max-width: calc(100% - 76px);
     font-size: 0.85rem;
   }
 
