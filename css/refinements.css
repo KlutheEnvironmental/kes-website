@@ -87,23 +87,32 @@
 }
 
 /* ========================================
-   WHY KES — CENTER THE PHOTO FRAME
+   WHY KES — MATCH HERO PHOTO FRAME
    ======================================== */
 
-/* Remove the intentionally offset frame treatment. */
+/*
+   Match the hero structurally as well as visually: the frame now sits on the
+   photo container, with the photograph clipped inside it.  This keeps the
+   image from visually obscuring any part of the border.
+*/
 .about-image {
   padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(199, 163, 76, 0.30);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transform: scale(1.025);
+  transform-origin: center center;
 }
 
 .about-image::before {
   display: none;
 }
 
-/* Match the hero photograph: same one-pixel muted-gold frame on all four sides. */
 .about-photo {
-  border: 1px solid rgba(199, 163, 76, 0.30);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* ========================================
@@ -116,5 +125,9 @@
     margin-top: 1.7rem;
     padding: 1.05rem 1.1rem 1rem 1.2rem;
     font-size: 1.18rem;
+  }
+
+  .about-image {
+    transform: none;
   }
 }
