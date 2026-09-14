@@ -274,9 +274,14 @@ p {
     0.88rem
     1.35rem;
 
+  border: 0;
+
   border-radius: 8px;
 
+  font: inherit;
   font-weight: 700;
+
+  cursor: pointer;
 
   transition:
     transform 0.2s ease,
@@ -376,8 +381,7 @@ section {
 
 .reassurance,
 .how-we-work,
-.testimonials,
-.contact-section {
+.testimonials {
   background:
     var(--color-soft);
 }
@@ -954,20 +958,179 @@ section {
    ======================================== */
 
 .contact-section {
-  text-align: center;
+  background:
+    var(--color-green-soft);
 }
 
-.contact-section p {
-  max-width: 700px;
+.contact-grid {
+  display: grid;
 
-  margin-left: auto;
-  margin-right: auto;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(420px, 1.1fr);
+
+  gap:
+    clamp(
+      3rem,
+      6vw,
+      5.5rem
+    );
+
+  align-items: center;
+}
+
+.contact-copy h2 {
+  max-width: 580px;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 610px;
 
   color: var(--color-muted);
 }
 
-.contact-section .button {
-  margin-top: 1rem;
+.contact-emphasis {
+  margin-top: 1.6rem;
+  margin-bottom: 0.55rem;
+
+  font-size: 1.08rem;
+  font-weight: 800;
+
+  color:
+    var(--color-green-dark) !important;
+}
+
+.direct-contact {
+  margin-top: 2rem;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.35rem 0.5rem;
+
+  font-size: 0.95rem;
+
+  color: var(--color-muted);
+}
+
+.direct-contact a {
+  color:
+    var(--color-green-dark);
+
+  font-weight: 700;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-panel {
+  padding:
+    2rem;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius);
+
+  background: white;
+
+  box-shadow:
+    var(--shadow);
+}
+
+.contact-form {
+  display: grid;
+
+  gap: 1.15rem;
+}
+
+.form-field {
+  display: grid;
+
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  color: var(--color-text);
+}
+
+.optional {
+  margin-left: 0.25rem;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  color: var(--color-muted);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  padding:
+    0.82rem 0.9rem;
+
+  border:
+    1px solid
+    #cfd6cd;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: var(--color-text);
+
+  font: inherit;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-field textarea {
+  resize: vertical;
+
+  min-height: 135px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color:
+    var(--color-green);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      93,
+      115,
+      95,
+      0.12
+    );
+}
+
+.form-submit {
+  width: fit-content;
+
+  margin-top: 0.3rem;
+}
+
+.form-note {
+  margin-bottom: 0;
+
+  max-width: 520px;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  color: var(--color-muted);
 }
 
 
@@ -1027,7 +1190,8 @@ section {
   .service-grid,
   .process-grid,
   .testimonial-grid,
-  .people-layout {
+  .people-layout,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1055,6 +1219,14 @@ section {
 
   .testimonial-card {
     min-height: auto;
+  }
+
+  .contact-copy {
+    max-width: 720px;
+  }
+
+  .contact-panel {
+    max-width: 720px;
   }
 
 }
@@ -1136,12 +1308,17 @@ section {
   }
 
   .testimonial-card,
-  .person-card {
+  .person-card,
+  .contact-panel {
     padding: 1.75rem;
   }
 
   .people-network-note {
     margin-top: 1.35rem;
+  }
+
+  .form-submit {
+    width: 100%;
   }
 
 }
