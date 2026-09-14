@@ -108,6 +108,24 @@
   box-shadow: 0 8px 18px rgba(64, 84, 67, 0.14);
 }
 
+/* Use the KES-owned lime spreading photograph as the hero.  The original
+   NRCS landscape remains in the HTML only as a fallback while we compare
+   hero options. */
+.hero-image {
+  background: url("../assets/images/hero-lime-spreading.jpg") center center / cover no-repeat;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  opacity: 0;
+  box-shadow: none;
+}
+
+.hero-image .photo-credit {
+  display: none;
+}
+
 /* ========================================
    REASSURANCE — A STRONGER VISUAL PAUSE
    ======================================== */
