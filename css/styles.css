@@ -842,7 +842,7 @@ section {
   display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    0.9fr 1.1fr;
 
   gap: 1.5rem;
 
@@ -862,7 +862,7 @@ section {
   background: white;
 }
 
-.person-card p:last-child {
+.person-card > p:last-child {
   margin-bottom: 0;
 
   color: var(--color-muted);
@@ -873,6 +873,66 @@ section {
     var(--color-green-dark);
 
   font-weight: 700;
+}
+
+.collaborator-card {
+  padding-bottom: 1.7rem;
+}
+
+.collaborator {
+  padding-top: 1.35rem;
+
+  margin-top: 1.35rem;
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.collaborator:first-of-type {
+  margin-top: 0.8rem;
+}
+
+.collaborator h4 {
+  margin:
+    0 0 0.15rem;
+
+  font-size: 1rem;
+
+  line-height: 1.35;
+
+  color: var(--color-text);
+}
+
+.collaborator-company {
+  margin-bottom: 0.65rem;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  color:
+    var(--color-green-dark);
+}
+
+.collaborator p:last-child {
+  margin-bottom: 0;
+
+  color: var(--color-muted);
+}
+
+.collaborator-note {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+
+  padding-top: 1.25rem;
+
+  border-top:
+    1px solid
+    var(--color-border);
+
+  font-size: 0.92rem;
+
+  color: var(--color-muted);
 }
 
 
@@ -1063,6 +1123,10 @@ section {
   }
 
   .testimonial-card {
+    padding: 1.75rem;
+  }
+
+  .person-card {
     padding: 1.75rem;
   }
 
