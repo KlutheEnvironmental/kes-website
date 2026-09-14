@@ -82,7 +82,9 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+
   line-height: 1.12;
+
   color: var(--color-text);
 }
 
@@ -95,6 +97,7 @@ h1 {
     );
 
   max-width: 14ch;
+
   margin-bottom: 1.15rem;
 
   letter-spacing: -0.02em;
@@ -115,6 +118,7 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
+
   margin-bottom: 0.65rem;
 }
 
@@ -136,6 +140,7 @@ p {
 
 .section-intro {
   max-width: 700px;
+
   margin-bottom: 2.75rem;
 
   font-size: 1.1rem;
@@ -150,6 +155,7 @@ p {
 
 .site-header {
   position: sticky;
+
   top: 0;
 
   z-index: 100;
@@ -173,6 +179,7 @@ p {
   min-height: 72px;
 
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
@@ -188,6 +195,7 @@ p {
 
 .main-nav {
   display: flex;
+
   align-items: center;
 
   gap: 1.7rem;
@@ -202,8 +210,7 @@ p {
 }
 
 .main-nav a:hover {
-  color:
-    var(--color-green-dark);
+  color: var(--color-green-dark);
 }
 
 
@@ -250,6 +257,7 @@ p {
 
 .hero-actions {
   display: flex;
+
   align-items: center;
 
   gap: 1.25rem;
@@ -338,6 +346,7 @@ p {
     );
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -716,7 +725,7 @@ section {
 
   justify-content: space-between;
 
-  min-height: 290px;
+  min-height: 310px;
 
   margin: 0;
 
@@ -741,17 +750,23 @@ section {
   position: absolute;
 
   top: 0.6rem;
-
   left: 1.25rem;
 
   font-size: 4.5rem;
-
   line-height: 1;
 
-  font-family: Georgia, serif;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
   color:
-    rgba(93, 115, 95, 0.16);
+    rgba(
+      93,
+      115,
+      95,
+      0.16
+    );
 }
 
 .testimonial-quote {
@@ -764,7 +779,6 @@ section {
   padding-top: 1rem;
 
   font-size: 1rem;
-
   line-height: 1.7;
 
   font-style: italic;
@@ -791,9 +805,43 @@ section {
 }
 
 .testimonial-attribution strong {
-  color: var(--color-green-dark);
+  color:
+    var(--color-green-dark);
 
   font-size: 0.98rem;
+}
+
+.testimonial-link {
+  width: fit-content;
+
+  color:
+    var(--color-green-dark);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  text-decoration-color:
+    rgba(
+      64,
+      84,
+      67,
+      0.35
+    );
+
+  text-underline-offset: 3px;
+
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.testimonial-link:hover {
+  color: var(--color-green);
+
+  text-decoration-color:
+    var(--color-green-dark);
 }
 
 
@@ -823,6 +871,12 @@ section {
     var(--radius);
 
   background: white;
+}
+
+.person-card p:last-child {
+  margin-bottom: 0;
+
+  color: var(--color-muted);
 }
 
 .person-role {
@@ -937,6 +991,10 @@ section {
       auto 1fr;
   }
 
+  .testimonial-card {
+    min-height: auto;
+  }
+
 }
 
 
@@ -1013,6 +1071,10 @@ section {
 
   .image-placeholder {
     min-height: 280px;
+  }
+
+  .testimonial-card {
+    padding: 1.75rem;
   }
 
 }
