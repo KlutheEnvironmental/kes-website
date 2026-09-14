@@ -11,6 +11,7 @@
   --color-field-mid: #405443;
 }
 
+
 /* ========================================
    HEADER / LOGO
    ======================================== */
@@ -32,26 +33,35 @@
   width: min(365px, 43vw);
   max-height: none;
   height: auto;
+
   object-fit: contain;
   object-position: left center;
 }
 
 .main-nav a {
   position: relative;
+
   padding-bottom: 0.22rem;
 }
 
 .main-nav a::after {
   content: "";
+
   position: absolute;
+
   left: 0;
   bottom: -0.05rem;
+
   width: 100%;
   height: 2px;
+
   border-radius: 999px;
+
   background: var(--color-gold);
+
   transform: scaleX(0);
   transform-origin: left center;
+
   transition: transform 0.2s ease;
 }
 
@@ -66,24 +76,32 @@
   color: var(--color-navy);
 }
 
+
 /* ========================================
    SECTION SIGNATURE
    ======================================== */
 
 .eyebrow {
   display: flex;
+
   align-items: center;
+
   gap: 0.75rem;
 }
 
 .eyebrow::before {
   content: "";
+
   width: 2.25rem;
   height: 5px;
+
   flex: 0 0 auto;
+
   border-radius: 999px;
+
   background: var(--color-gold);
 }
+
 
 /* ========================================
    HERO
@@ -97,42 +115,96 @@
       var(--color-background) 64%,
       rgba(32, 63, 102, 0.045) 100%
     );
-  border-bottom: 1px solid rgba(199, 163, 76, 0.16);
+
+  border-bottom:
+    1px solid
+    rgba(199, 163, 76, 0.16);
 }
 
-.hero-image img {
-  border: 1px solid rgba(199, 163, 76, 0.30);
+
+/*
+   Give the hero more room than the rest of the page.
+   This allows the photograph to become a real half of
+   the opening composition instead of a supporting image.
+*/
+
+@media (min-width: 901px) {
+
+  .hero .container {
+    width: min(94%, 1320px);
+  }
+
+  .hero-grid {
+    grid-template-columns:
+      minmax(0, 0.95fr)
+      minmax(560px, 1.05fr);
+
+    gap: 3.25rem;
+  }
+
 }
+
+
+/*
+   Hero photograph.
+
+   The original NRCS image is still present in the HTML,
+   but hidden.  The KES-owned lime spreading image is
+   displayed here as the hero background.
+*/
+
 .hero-image {
   overflow: hidden;
-  border-radius: var(--radius);
-}
 
-.hero-image img {
-  transform: scale(1.12);
-  transform-origin: 43% 46%;
-}
-.hero .primary-button {
-  box-shadow: 0 8px 18px rgba(64, 84, 67, 0.14);
-}
+  width: 100%;
 
-/* Use the KES-owned lime spreading photograph as the hero.  The original
-   NRCS landscape remains in the HTML only as a fallback while we compare
-   hero options. */
-.hero-image {
-  background: url("../assets/images/hero-lime-spreading.jpg") center center / cover no-repeat;
   border-radius: var(--radius);
+
+  border:
+    1px solid
+    rgba(199, 163, 76, 0.30);
+
+  background:
+    url("../assets/images/hero-lime-spreading.jpg")
+    43% 46% / 112% auto
+    no-repeat;
+
   box-shadow: var(--shadow);
 }
 
+
+/*
+   The hidden HTML image preserves the 4:3 dimensions
+   of the hero frame.
+*/
+
 .hero-image img {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
   opacity: 0;
+
   box-shadow: none;
 }
+
+
+/*
+   This photograph belongs to KES, so suppress the
+   USDA-NRCS credit that belongs to the previous hero.
+*/
 
 .hero-image .photo-credit {
   display: none;
 }
+
+
+.hero .primary-button {
+  box-shadow:
+    0 8px 18px
+    rgba(64, 84, 67, 0.14);
+}
+
 
 /* ========================================
    REASSURANCE — A STRONGER VISUAL PAUSE
@@ -140,8 +212,10 @@
 
 .reassurance {
   position: relative;
+
   overflow: hidden;
   isolation: isolate;
+
   background:
     linear-gradient(
       115deg,
@@ -152,10 +226,15 @@
 
 .reassurance::after {
   content: "";
+
   position: absolute;
+
   inset: 0;
+
   z-index: 0;
+
   pointer-events: none;
+
   background:
     repeating-linear-gradient(
       -8deg,
@@ -168,6 +247,7 @@
 
 .reassurance > .narrow-container {
   position: relative;
+
   z-index: 1;
 }
 
@@ -180,8 +260,10 @@
 }
 
 .reassurance p {
-  color: rgba(255, 255, 255, 0.82);
+  color:
+    rgba(255, 255, 255, 0.82);
 }
+
 
 /* ========================================
    SERVICES — EDITORIAL DETAIL
@@ -193,35 +275,57 @@
 
 .service-card {
   position: relative;
+
   overflow: hidden;
+
   counter-increment: kes-service;
-  border-top: 4px solid rgba(199, 163, 76, 0.82);
+
+  border-top:
+    4px solid
+    rgba(199, 163, 76, 0.82);
 }
 
 .service-card::after {
-  content: counter(kes-service, decimal-leading-zero);
+  content:
+    counter(
+      kes-service,
+      decimal-leading-zero
+    );
+
   position: absolute;
+
   top: 0.8rem;
   right: 1rem;
+
   font-size: 3rem;
   line-height: 1;
+
   font-weight: 800;
+
   letter-spacing: -0.04em;
-  color: rgba(199, 163, 76, 0.16);
+
+  color:
+    rgba(199, 163, 76, 0.16);
+
   pointer-events: none;
 }
 
 .service-card h3 {
   position: relative;
+
   z-index: 1;
+
   max-width: 78%;
+
   color: var(--color-navy);
 }
 
 .service-card p {
   position: relative;
+
   z-index: 1;
 }
+
 
 /* ========================================
    HOW WE WORK — KES PLANNING PRINCIPLE
@@ -229,81 +333,129 @@
 
 .how-we-work {
   position: relative;
+
   overflow: hidden;
   isolation: isolate;
+
   background: #f2f0e9;
 }
 
 .how-we-work > .container {
   position: relative;
+
   z-index: 1;
 }
 
 .how-we-work::after {
   content: "";
+
   position: absolute;
+
   right: -35px;
   bottom: -4px;
+
   width: min(58vw, 760px);
   height: 145px;
+
   z-index: 0;
+
   pointer-events: none;
+
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 140'%3E%3Cg fill='rgb(64,84,67)' fill-opacity='.09'%3E%3Crect x='0' y='124' width='800' height='16'/%3E%3Cpolygon points='398,82 470,40 542,82'/%3E%3Crect x='414' y='80' width='112' height='44'/%3E%3Crect x='570' y='65' width='34' height='59'/%3E%3Cellipse cx='587' cy='65' rx='17' ry='8'/%3E%3Ccircle cx='682' cy='74' r='29'/%3E%3Crect x='679' y='96' width='7' height='28'/%3E%3Ccircle cx='737' cy='88' r='20'/%3E%3Crect x='734' y='103' width='6' height='21'/%3E%3C/g%3E%3Cg fill='none' stroke='rgb(64,84,67)' stroke-opacity='.12' stroke-width='4'%3E%3Cpath d='M45 108H330'/%3E%3Cpath d='M78 92V124M130 92V124M182 92V124M234 92V124M286 92V124'/%3E%3Cpath d='M45 101H330'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 140'%3E%3Cg fill='rgb(64,84,67)' fill-opacity='.09'%3E%3Crect x='0' y='124' width='800' height='16'/%3E%3Cpolygon points='398,82 470,40 542,82'/%3E%3Crect x='414' y='80' width='112' height='44'/%3E%3Crect x='570' y='65' width='34' height='59'/%3E%3Cellipse cx='587' cy='65' rx='17' ry='8'/%3E%3Ccircle cx='682' cy='74' r='29'/%3E%3Crect x='679' y='96' width='7' height='28'/%3E%3Ccircle cx='737' cy='88' r='20'/%3E%3Crect x='734' y='103' width='6' height='21'/%3E%3C/g%3E%3Cg fill='none' stroke='rgb(64,84,67)' stroke-opacity='.12' stroke-width='4'%3E%3Cpath d='M45 108H330'/%3E%3Cpath d='M78 92V124M130 92V124M182 92V124M234 92V124M286 92V124'/%3E%3Cpath d='M45 101H330'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .philosophy-line {
   position: relative;
+
   max-width: 860px;
+
   margin-top: 2.4rem;
-  padding: 1.35rem 1.65rem 1.3rem 1.8rem;
-  border-left: 6px solid var(--color-gold);
-  border-radius: 0 12px 12px 0;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 8px 24px rgba(47, 51, 47, 0.06);
+
+  padding:
+    1.35rem
+    1.65rem
+    1.3rem
+    1.8rem;
+
+  border-left:
+    6px solid
+    var(--color-gold);
+
+  border-radius:
+    0 12px 12px 0;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 8px 24px
+    rgba(47, 51, 47, 0.06);
+
   color: var(--color-navy);
+
   font-size: 1.38rem;
   line-height: 1.45;
 }
 
 .philosophy-line::before {
   content: "KES Planning Principle";
+
   display: block;
+
   margin-bottom: 0.38rem;
+
   color: var(--color-green-dark);
+
   font-size: 0.72rem;
   font-weight: 800;
+
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
+
 /* ========================================
-   WHY KES — A MORE DISTINCTIVE PHOTO FRAME
+   WHY KES — DISTINCTIVE PHOTO FRAME
    ======================================== */
 
 .about-image {
   position: relative;
-  padding: 0 0 12px 12px;
+
+  padding:
+    0 0 12px 12px;
 }
 
 .about-image::before {
   content: "";
+
   position: absolute;
+
   left: 0;
   bottom: 0;
+
   width: calc(100% - 12px);
   height: calc(100% - 12px);
-  border: 2px solid rgba(199, 163, 76, 0.62);
+
+  border:
+    2px solid
+    rgba(199, 163, 76, 0.62);
+
   border-radius: var(--radius);
+
   z-index: 0;
 }
 
 .about-photo {
   position: relative;
+
   z-index: 1;
 }
+
 
 /* ========================================
    TRUST / PEOPLE / CONTACT ACCENTS
@@ -312,30 +464,39 @@
 .credibility-intro,
 .person-role,
 .collaborator-company {
-  color: var(--color-navy) !important;
+  color:
+    var(--color-navy)
+    !important;
 }
 
 .testimonial-card::before {
-  color: rgba(32, 63, 102, 0.12);
+  color:
+    rgba(32, 63, 102, 0.12);
 }
 
 .people-network-note {
-  border-left-color: var(--color-gold);
+  border-left-color:
+    var(--color-gold);
 }
 
 .contact-emphasis {
-  color: var(--color-navy) !important;
+  color:
+    var(--color-navy)
+    !important;
 }
 
 .site-footer {
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 }
 
+
 /* ========================================
-   RESPONSIVE
+   TABLET / SMALL LAPTOP
    ======================================== */
 
 @media (max-width: 900px) {
+
   .header-inner {
     min-height: 104px;
   }
@@ -344,20 +505,55 @@
     width: 320px;
   }
 
+
+  /*
+     Return the hero to the base one-column responsive
+     behavior at tablet width.
+  */
+
+  .hero .container {
+    width:
+      min(
+        92%,
+        var(--max-width)
+      );
+  }
+
+  .hero-image {
+    max-width: 720px;
+
+    background-size: 112% auto;
+    background-position: 43% 46%;
+  }
+
+
   .how-we-work::after {
     width: 78vw;
+
     opacity: 0.78;
   }
+
 }
 
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
 @media (max-width: 650px) {
+
   .header-inner {
     min-height: auto;
   }
 
   .site-logo {
-    width: min(265px, 78vw);
+    width:
+      min(
+        265px,
+        78vw
+      );
   }
+
 
   .eyebrow {
     gap: 0.58rem;
@@ -368,6 +564,18 @@
     height: 4px;
   }
 
+
+  /*
+     Back off the hero zoom slightly on phones so the
+     farm scene remains understandable at small size.
+  */
+
+  .hero-image {
+    background-size: 106% auto;
+    background-position: 44% 46%;
+  }
+
+
   .service-card h3 {
     max-width: 82%;
   }
@@ -376,20 +584,33 @@
     font-size: 2.45rem;
   }
 
+
   .how-we-work::after {
     width: 110vw;
     height: 115px;
+
     right: -105px;
+
     opacity: 0.58;
   }
 
+
   .philosophy-line {
     margin-top: 1.7rem;
-    padding: 1.05rem 1.1rem 1rem 1.2rem;
+
+    padding:
+      1.05rem
+      1.1rem
+      1rem
+      1.2rem;
+
     font-size: 1.18rem;
   }
 
+
   .about-image {
-    padding: 0 0 9px 9px;
+    padding:
+      0 0 9px 9px;
   }
+
 }
