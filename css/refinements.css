@@ -99,9 +99,9 @@
   display: none;
 }
 
-/* Put the frame directly on the photograph so it is centered on all four sides. */
+/* Match the hero photograph: same one-pixel muted-gold frame on all four sides. */
 .about-photo {
-  border: 2px solid rgba(199, 163, 76, 0.66);
+  border: 1px solid rgba(199, 163, 76, 0.30);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
