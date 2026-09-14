@@ -24,6 +24,30 @@
 }
 
 /* ========================================
+   HERO — USE THE ACTUAL KES PHOTO
+   ======================================== */
+
+/*
+   The lime-spreading photograph now lives in the HTML itself rather than
+   being substituted as a CSS background.  Keep the same crop and framing
+   that we approved visually.
+*/
+.hero-image {
+  background: none;
+}
+
+.hero-image img {
+  opacity: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 43% 46%;
+  transform: scale(1.12);
+  transform-origin: 43% 46%;
+  box-shadow: none;
+}
+
+/* ========================================
    KES STATEMENT CALLOUTS
    ======================================== */
 
@@ -190,6 +214,11 @@
     margin-top: 1.7rem;
     padding: 1.05rem 1.1rem 1rem 1.2rem;
     font-size: 1.18rem;
+  }
+
+  .hero-image img {
+    transform: scale(1.06);
+    transform-origin: 44% 46%;
   }
 
   .about-image {
