@@ -276,45 +276,12 @@
           <h2>Let’s Talk About Your Project</h2>
           <p>Whether you are exploring a conservation project, planning improvements on the farm, or already have an NRCS contract in hand, KES can help you identify a practical path forward.</p>
           <p class="contact-emphasis">Start with your farm and your goals.</p>
-          <p>Tell us a little about your operation and what you are working toward, and we can talk about the options and a practical next step.</p>
-          <div class="direct-contact">
-            <span>A little information about your farm and project is all we need to get started.</span>
-            <a href="mailto:john@klutheenvironmental.com">John@KlutheEnvironmental.com</a>
-          </div>
         </div>
 
         <div class="contact-panel">
-          <form id="kes-contact-form" class="contact-form">
-            <div class="form-row form-row-two">
-              <div class="form-field">
-                <label for="contact-name">Name</label>
-                <input id="contact-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="form-field">
-                <label for="contact-email">Email</label>
-                <input id="contact-email" name="email" type="email" autocomplete="email" required>
-              </div>
-            </div>
-
-            <div class="form-row form-row-two">
-              <div class="form-field">
-                <label for="contact-phone">Phone <span class="optional">Optional</span></label>
-                <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-              <div class="form-field">
-                <label for="contact-farm">Farm / Location <span class="optional">Optional</span></label>
-                <input id="contact-farm" name="farm" type="text">
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="contact-project">What are you working on?</label>
-              <textarea id="contact-project" name="project" rows="4" required></textarea>
-            </div>
-
-            <button class="button primary-button form-submit" type="submit">Start the Conversation</button>
-            <p class="form-note">Submitting this form will open your email program with your information ready to send to KES.</p>
-          </form>
+          <h3>A little information about your farm and project is all we need to get started.</h3>
+          <p>Tell us where your farm is, what you’re working toward, and whether an NRCS contract is already part of the project.</p>
+          <a class="button primary-button" href="mailto:john@klutheenvironmental.com">Email John at John@KlutheEnvironmental.com</a>
         </div>
       </div>
     </section>
@@ -326,35 +293,6 @@
       <p>© Kluthe Environmental Solutions, LLC · <a href="https://www.linkedin.com/in/johnkluthe" target="_blank" rel="noopener noreferrer" aria-label="John Kluthe on LinkedIn">LinkedIn ↗</a></p>
     </div>
   </footer>
-
-  <script>
-    const contactForm = document.getElementById("kes-contact-form");
-
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("contact-name").value.trim();
-      const email = document.getElementById("contact-email").value.trim();
-      const phone = document.getElementById("contact-phone").value.trim();
-      const farm = document.getElementById("contact-farm").value.trim();
-      const project = document.getElementById("contact-project").value.trim();
-
-      const subject = "KES Website Project Inquiry - " + name;
-      const body =
-        "Name: " + name + "\n\n" +
-        "Email: " + email + "\n\n" +
-        "Phone: " + (phone || "Not provided") + "\n\n" +
-        "Farm / Location: " + (farm || "Not provided") + "\n\n" +
-        "What I am working on:\n" + project;
-
-      const mailtoLink =
-        "mailto:info@klutheenvironmental.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailtoLink;
-    });
-  </script>
 
 </body>
 </html>
