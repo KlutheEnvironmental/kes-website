@@ -25,6 +25,20 @@
 }
 
 /* ========================================
+   HEADER — SLIGHTLY LARGER KES LOGO
+   ======================================== */
+
+.site-logo {
+  width: min(410px, 48vw);
+}
+
+@media (max-width: 900px) {
+  .site-logo {
+    width: 360px;
+  }
+}
+
+/* ========================================
    HERO — USE THE ACTUAL KES PHOTO
    ======================================== */
 
@@ -210,6 +224,10 @@
    ======================================== */
 
 @media (max-width: 650px) {
+  .site-logo {
+    width: min(300px, 88vw);
+  }
+
   .hero-principle,
   .how-we-work .philosophy-line {
     margin-top: 1.7rem;
