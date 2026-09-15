@@ -25,28 +25,32 @@
 }
 
 /* ========================================
-   HEADER — SLIGHTLY LARGER KES LOGO
+   HEADER — LARGER KES LOGO
    ======================================== */
 
 .site-logo {
-  width: min(410px, 48vw);
+  width: min(465px, 50vw);
 }
 
 @media (max-width: 900px) {
   .site-logo {
-    width: 360px;
+    width: min(410px, 48vw);
   }
 }
 
 /* ========================================
-   HERO — USE THE ACTUAL KES PHOTO
+   HERO — PHOTO + PLANNING PRINCIPLE
    ======================================== */
 
 /*
-   The lime-spreading photograph now lives in the HTML itself rather than
-   being substituted as a CSS background.  Keep the same crop and framing
-   that we approved visually.
+   Keep the photograph as the right-hand anchor, align it with the top of the
+   hero copy, and place the KES Planning Principle directly beneath it.
 */
+.hero-visual {
+  align-self: start;
+  width: 100%;
+}
+
 .hero-image {
   background: none;
 }
@@ -60,6 +64,12 @@
   transform: scale(1.12);
   transform-origin: 43% 46%;
   box-shadow: none;
+}
+
+@media (min-width: 901px) {
+  .hero-grid {
+    align-items: start;
+  }
 }
 
 /* Give the expanded technical-services line enough visual weight to work as a quick recognition signal. */
@@ -77,8 +87,7 @@
 /*
    Keep the KES Planning Principle in the hero and the KES Working Approach
    in How We Work visually identical: same two-line structure, frame, type
-   size, label treatment, and emphasis.  The hero principle spans the full
-   hero width below the photograph and copy.
+   size, label treatment, and emphasis.
 */
 .hero-principle,
 .how-we-work .philosophy-line {
@@ -96,11 +105,10 @@
   line-height: 1.45;
 }
 
-.hero-grid > .hero-principle {
-  grid-column: 1 / -1;
+.hero-visual .hero-principle {
   width: 100%;
   max-width: none;
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .hero-principle-label,
@@ -126,10 +134,17 @@
   content: "KES Working Approach";
 }
 
-@media (min-width: 901px) {
-  .hero-grid > .hero-principle {
-    margin-top: -1.45rem;
-  }
+/* ========================================
+   SERVICES — REMOVE DECORATIVE NUMBERS
+   ======================================== */
+
+/* The service cards are categories, not a sequence; remove the 01–04 markers. */
+.service-card::after {
+  display: none;
+}
+
+.service-card h3 {
+  max-width: 100%;
 }
 
 /* ========================================
@@ -247,7 +262,7 @@
 
 @media (max-width: 650px) {
   .site-logo {
-    width: min(300px, 88vw);
+    width: min(335px, 90vw);
   }
 
   .how-we-work .philosophy-line {
@@ -260,8 +275,8 @@
     font-size: 1.18rem;
   }
 
-  .hero-grid > .hero-principle {
-    margin-top: 0;
+  .hero-visual .hero-principle {
+    margin-top: 0.9rem;
   }
 
   .hero-image img {
