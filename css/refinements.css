@@ -163,22 +163,28 @@
 }
 
 /* ========================================
-   WHY KES — MATCH HERO PHOTO FRAME
+   WHY KES — FULL-WIDTH HEADING + CREDENTIALS
    ======================================== */
 
-/*
-   Match the hero structurally as well as visually: the frame now sits on the
-   photo container, with the photograph clipped inside it.  This keeps the
-   image from visually obscuring any part of the border.
-*/
+.about-heading {
+  margin-bottom: 2.4rem;
+}
+
+.about-heading h2 {
+  max-width: 900px;
+}
+
+.about-main {
+  align-items: center;
+}
+
 .about-image {
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(199, 163, 76, 0.30);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transform: scale(1.025);
-  transform-origin: center center;
+  transform: none;
 }
 
 .about-image::before {
@@ -186,27 +192,65 @@
 }
 
 .about-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
   border: 0;
   border-radius: 0;
   box-shadow: none;
 }
+
+.about-content p {
+  color: var(--color-muted);
+}
+
+.about-content > p {
+  max-width: 680px;
+}
+
+.credibility-section {
+  margin-top: 3rem;
+  padding-top: 1.9rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.credibility-intro {
+  max-width: none;
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width: 901px) {
-  .two-column {
+  .about-main {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
 
-  .about-image {
-    align-self: center;
-    min-height: 0;
-    transform: none;
+  .credibility-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-main {
+    grid-template-columns: 1fr;
   }
 
-  .about-photo {
-    width: 100%;
-    height: auto;
-    min-height: 0;
+  .credibility-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 650px) {
+  .about-heading {
+    margin-bottom: 1.8rem;
+  }
+
+  .credibility-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }
 /* ========================================
    FOOTER — LINKEDIN ICON
