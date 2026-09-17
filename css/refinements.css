@@ -191,15 +191,22 @@
   box-shadow: none;
 }
 @media (min-width: 901px) {
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
   .about-image {
     align-self: center;
     min-height: 0;
-    aspect-ratio: 1.70 / 1;
     transform: none;
   }
- .about-photo {
-  width: 100%;
-  height: auto;
+
+  .about-photo {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
 }
 /* ========================================
    FOOTER — LINKEDIN ICON
