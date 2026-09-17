@@ -272,19 +272,19 @@
    ANCHOR OFFSET FOR STICKY HEADER
    ======================================== */
 
-section[id] {
-  scroll-margin-top: 195px;
+html {
+  scroll-padding-top: 145px;
 }
 
 @media (max-width: 900px) {
-  section[id] {
-    scroll-margin-top: 165px;
+  html {
+    scroll-padding-top: 120px;
   }
 }
 
 @media (max-width: 650px) {
-  section[id] {
-    scroll-margin-top: 135px;
+  html {
+    scroll-padding-top: 95px;
   }
 }
 
