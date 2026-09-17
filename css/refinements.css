@@ -194,16 +194,18 @@
   .about-image {
     align-self: center;
     min-height: 0;
+    aspect-ratio: 1.55 / 1;
     transform: none;
   }
 
   .about-photo {
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 0;
+    object-fit: cover;
+    object-position: center;
   }
 }
-
 /* ========================================
    FOOTER — LINKEDIN ICON
    ======================================== */
