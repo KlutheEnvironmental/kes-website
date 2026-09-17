@@ -273,18 +273,18 @@
    ======================================== */
 
 section[id] {
-  scroll-margin-top: 165px;
+  scroll-margin-top: 195px;
 }
 
 @media (max-width: 900px) {
   section[id] {
-    scroll-margin-top: 135px;
+    scroll-margin-top: 165px;
   }
 }
 
 @media (max-width: 650px) {
   section[id] {
-    scroll-margin-top: 105px;
+    scroll-margin-top: 135px;
   }
 }
 
