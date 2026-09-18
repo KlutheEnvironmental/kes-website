@@ -324,7 +324,7 @@ html {
 
 @media (max-width: 650px) {
   html {
-    scroll-padding-top: 165px;
+    scroll-padding-top: 150px;
   }
 }
 
@@ -334,7 +334,7 @@ html {
 
 @media (max-width: 650px) {
   .site-logo {
-    width: min(335px, 90vw);
+    width: min(310px, 84vw);
   }
 
   .how-we-work .philosophy-line {
