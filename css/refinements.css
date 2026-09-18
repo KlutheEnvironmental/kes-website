@@ -324,7 +324,7 @@ html {
 
 @media (max-width: 650px) {
   html {
-    scroll-padding-top: 95px;
+    scroll-padding-top: 60px;
   }
 }
 
