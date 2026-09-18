@@ -324,14 +324,7 @@ html {
 
 @media (max-width: 650px) {
   html {
-    scroll-padding-top: 0;
-  }
-
-  #services,
-  #about,
-  #people,
-  #contact {
-    scroll-margin-top: -55px;
+    scroll-padding-top: 165px;
   }
 }
 
