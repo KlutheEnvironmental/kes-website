@@ -334,7 +334,13 @@ html {
 
 @media (max-width: 650px) {
   .site-logo {
-    width: min(310px, 84vw);
+    width: min(335px, 90vw);
+  }
+
+  .header-inner {
+    padding-top: 0.8rem;
+    padding-bottom: 0.65rem;
+    gap: 0.35rem;
   }
 
   .how-we-work .philosophy-line {
