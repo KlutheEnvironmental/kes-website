@@ -162,6 +162,135 @@
   color: rgba(32, 63, 102, 0.14);
 }
 
+
+/* ========================================
+   PLANNING REQUIREMENTS — EXPANDABLE NOTE
+   ======================================== */
+
+.planning-requirements {
+  padding: 0 0 4.75rem;
+}
+
+.planning-note {
+  overflow: hidden;
+  border: 1px solid var(--color-kes-frame);
+  border-left: 5px solid var(--color-gold);
+  border-radius: 0 10px 10px 0;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 6px 20px rgba(47, 51, 47, 0.045);
+}
+
+.planning-note summary {
+  position: relative;
+  display: block;
+  padding: 1.15rem 3.4rem 1.15rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.planning-note summary::-webkit-details-marker {
+  display: none;
+}
+
+.planning-note summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1.35rem;
+  transform: translateY(-50%);
+  color: var(--color-kes-green-deep);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.planning-note[open] summary::after {
+  content: "−";
+}
+
+.planning-note summary:hover .planning-note-heading {
+  color: var(--color-kes-green-deep);
+}
+
+.planning-note summary:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: -3px;
+}
+
+.planning-note-heading {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-navy);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.planning-note-summary {
+  display: block;
+  max-width: 920px;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.planning-note-content {
+  padding: 0 1.4rem 1.45rem;
+  border-top: 1px solid rgba(64, 84, 67, 0.16);
+}
+
+.planning-note-landowner {
+  padding-top: 1.25rem;
+}
+
+.planning-note-content h3 {
+  margin: 0 0 0.35rem;
+  color: var(--color-navy);
+  font-size: 1rem;
+}
+
+.planning-note-content p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.planning-note-landowner p {
+  max-width: 900px;
+}
+
+.planning-note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 2.4rem;
+  margin-top: 1.35rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(64, 84, 67, 0.14);
+}
+
+@media (max-width: 650px) {
+  .planning-requirements {
+    padding-bottom: 3.5rem;
+  }
+
+  .planning-note summary {
+    padding: 1rem 2.9rem 1rem 1.05rem;
+  }
+
+  .planning-note summary::after {
+    right: 1rem;
+  }
+
+  .planning-note-content {
+    padding: 0 1.05rem 1.2rem;
+  }
+
+  .planning-note-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
 /* ========================================
    WHY KES — FULL-WIDTH HEADING + CREDENTIALS
    ======================================== */
