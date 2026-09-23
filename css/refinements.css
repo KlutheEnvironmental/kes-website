@@ -537,7 +537,7 @@ html {
 
 .about-page-story {
   padding: 0 0 5rem;
-  background: var(--color-background);
+  background: var(--color-surface);
 }
 
 .about-page-story > .narrow-container > p {
