@@ -135,6 +135,34 @@
 }
 
 /* ========================================
+   CONSERVATION PLANNING — PLAIN-LANGUAGE DEFINITION
+   ======================================== */
+
+.conservation-definition {
+  margin: 1.8rem 0 1.9rem;
+  padding: 0.2rem 0 0.2rem 1.35rem;
+  border-left: 5px solid var(--color-gold);
+}
+
+.conservation-definition-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #f2ead5;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.reassurance .conservation-definition p {
+  max-width: 820px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ========================================
    SERVICES — REMOVE DECORATIVE NUMBERS
    ======================================== */
 
