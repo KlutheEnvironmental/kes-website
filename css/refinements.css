@@ -637,3 +637,38 @@ html {
     padding: 3.4rem 0;
   }
 }
+
+
+/* ========================================
+   CONTEXTUAL PAGE LINKS
+   ======================================== */
+
+.section-deep-link {
+  margin-top: 1.35rem;
+  margin-bottom: 0;
+}
+
+.section-deep-link .text-link {
+  display: inline-block;
+}
+
+.about-related {
+  padding: 4rem 0;
+  background: var(--color-surface);
+}
+
+.about-related h2 {
+  max-width: 760px;
+}
+
+.about-related p:not(.eyebrow):not(.section-deep-link) {
+  max-width: 760px;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+  .about-related {
+    padding: 3.25rem 0;
+  }
+}
