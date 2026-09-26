@@ -341,6 +341,17 @@ section {
 
 .nrcs-callout-placeholder {
   min-height: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #b7c1b4;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-green-dark);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .nrcs-independent-note {
