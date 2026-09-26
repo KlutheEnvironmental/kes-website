@@ -337,15 +337,10 @@ section {
   width: 100%;
   max-width: 420px;
   justify-self: end;
-  padding: 1rem 1.15rem;
-  border-radius: 6px;
-  background: var(--color-green-dark);
 }
 
-.nrcs-callout-marker img {
-  display: block;
-  width: 100%;
-  height: auto;
+.nrcs-callout-placeholder {
+  min-height: 122px;
 }
 
 .nrcs-independent-note {
