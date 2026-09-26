@@ -319,19 +319,20 @@ section {
 
 .nrcs-callout {
   margin-top: 1.75rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: center;
   padding: 1.75rem 2rem;
   border: 1px solid #cbd5c9;
   border-radius: var(--radius);
   background: var(--color-green-soft);
 }
 
+.nrcs-callout-content {
+  text-align: left;
+}
+
 .nrcs-callout-marker {
-  width: 190px;
-  padding: 0.7rem 0.85rem;
+  width: min(360px, 78%);
+  margin: 1.25rem auto 1rem;
+  padding: 0.9rem 1rem;
   border-radius: 6px;
   background: var(--color-green-dark);
 }
@@ -343,7 +344,7 @@ section {
 }
 
 .nrcs-independent-note {
-  margin-top: 0.45rem;
+  margin-top: 0.3rem;
   font-size: 0.82rem;
   line-height: 1.45;
   color: var(--color-muted);
