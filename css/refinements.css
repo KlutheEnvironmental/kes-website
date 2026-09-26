@@ -700,3 +700,129 @@ html {
     padding: 3.25rem 0;
   }
 }
+
+
+/* ========================================
+   LIVESTOCK & NUTRIENT MANAGEMENT PAGE
+   ======================================== */
+
+.service-detail-hero {
+  padding: 5rem 0 4rem;
+  background: var(--color-background);
+}
+
+.service-detail-hero h1 {
+  max-width: 900px;
+}
+
+.service-detail-lead {
+  max-width: 860px;
+  color: var(--color-muted);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.service-detail-hero > .narrow-container > p:not(.eyebrow):not(.service-detail-lead) {
+  max-width: 860px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.service-brand-line {
+  margin-top: 1.8rem;
+  padding: 1.05rem 1.25rem;
+  border-left: 5px solid var(--color-gold);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--color-navy);
+  font-size: 1.12rem;
+}
+
+.service-detail-main {
+  padding: 4.75rem 0 5rem;
+  background: var(--color-surface);
+}
+
+.service-overview-section > p,
+.service-detail-copy p {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.service-overview-section > p {
+  max-width: 900px;
+}
+
+.service-overview-section .eyebrow {
+  margin-bottom: 0.65rem;
+}
+
+.service-detail-accordions {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service-detail-note {
+  margin-top: 1.5rem;
+}
+
+.service-detail-accordions .service-detail-note {
+  margin-top: 0;
+}
+
+.service-detail-copy {
+  padding-top: 1.2rem;
+}
+
+.service-detail-copy h3 {
+  margin-top: 1.25rem;
+}
+
+.service-detail-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.service-detail-list li + li {
+  margin-top: 0.3rem;
+}
+
+.service-detail-planning-note {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.service-detail-contact {
+  padding: 4rem 0;
+  background: var(--color-green-soft);
+}
+
+.service-card-link {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.service-card-link .text-link {
+  display: inline-block;
+}
+
+@media (max-width: 650px) {
+  .service-detail-hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .service-detail-lead {
+    font-size: 1.08rem;
+  }
+
+  .service-detail-main {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .service-detail-contact {
+    padding: 3.5rem 0;
+  }
+}
