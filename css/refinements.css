@@ -836,3 +836,69 @@ html {
 .service-back-link .text-link {
   display: inline-block;
 }
+
+
+/* ========================================
+   REFERRAL / SHARE KES
+   ======================================== */
+
+.referral-section {
+  padding: 3.25rem 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.referral-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.referral-inner h2 {
+  margin-bottom: 0.8rem;
+}
+
+.referral-inner p:not(.eyebrow) {
+  max-width: 780px;
+  margin-bottom: 0.65rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.referral-private {
+  font-size: 0.96rem;
+}
+
+.referral-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  min-width: 185px;
+}
+
+.referral-copy-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.referral-copy-status {
+  min-height: 1.2em;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 760px) {
+  .referral-section {
+    padding: 2.75rem 0;
+  }
+
+  .referral-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
