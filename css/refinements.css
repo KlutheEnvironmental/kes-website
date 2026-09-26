@@ -902,3 +902,39 @@ html {
     gap: 1.5rem;
   }
 }
+
+
+/* ========================================
+   CONTEXTUAL TEXT LINKS
+   ======================================== */
+
+.text-link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-green-dark);
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.35;
+  padding-bottom: 0.12rem;
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  transition: color 0.18s ease, background-size 0.18s ease, transform 0.18s ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--color-green);
+  background-size: 100% 3px;
+}
+
+.text-link:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.text-link:hover {
+  transform: translateX(2px);
+}
