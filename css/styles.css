@@ -340,69 +340,9 @@ section {
 }
 
 .nrcs-callout-placeholder {
-  position: relative;
   min-height: 148px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1.45rem 1.65rem 1.35rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-green-dark), var(--color-green));
-  color: white;
-  box-shadow: 0 10px 24px rgba(40, 58, 45, 0.12);
-}
-
-.nrcs-callout-placeholder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  background: var(--color-gold);
-}
-
-.nrcs-callout-placeholder::after {
-  content: "";
-  position: absolute;
-  right: -42px;
-  bottom: -58px;
-  width: 150px;
-  height: 150px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-}
-
-.nrcs-placeholder-kicker,
-.nrcs-placeholder-title,
-.nrcs-placeholder-sub {
-  position: relative;
-  z-index: 1;
-}
-
-.nrcs-placeholder-kicker {
-  margin-bottom: 0.15rem;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-}
-
-.nrcs-placeholder-title {
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-.nrcs-placeholder-sub {
-  margin-top: 0.55rem;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.8rem;
-  line-height: 1.35;
+  background: #ffffff;
 }
 
 .nrcs-independent-note {
