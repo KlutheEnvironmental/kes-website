@@ -330,16 +330,21 @@ section {
 }
 
 .nrcs-callout-marker {
-  width: 190px;
-  padding: 0.7rem 0.85rem;
-  border-radius: 6px;
-  background: var(--color-green-dark);
+  width: 205px;
 }
 
 .nrcs-callout-marker img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 2px;
+}
+
+.nrcs-independent-note {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--color-muted);
 }
 
 .nrcs-callout-content h3 {
