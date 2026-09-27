@@ -639,14 +639,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 56%,
-      rgba(255, 255, 255, 0.025) 56%,
-      rgba(255, 255, 255, 0.025) 100%
-    );
+  background: transparent;
 }
 
 .service-area-grid {
