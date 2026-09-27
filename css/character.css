@@ -614,3 +614,124 @@
   }
 
 }
+
+
+/* ========================================
+   SERVICE AREA — REGIONAL FOOTPRINT
+   ======================================== */
+
+.service-area-band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 3.4rem 0;
+  background:
+    linear-gradient(
+      112deg,
+      var(--color-field-dark) 0%,
+      var(--color-field-mid) 100%
+    );
+}
+
+.service-area-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 56%,
+      rgba(255, 255, 255, 0.025) 56%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+}
+
+.service-area-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.service-area-primary {
+  padding-right: clamp(0rem, 2vw, 1.5rem);
+}
+
+.service-area-band .eyebrow {
+  color: #f2ead5;
+}
+
+.service-area-band h2 {
+  max-width: 540px;
+  margin-bottom: 0.65rem;
+  color: #ffffff;
+}
+
+.service-area-core {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.service-area-core span {
+  margin: 0 0.42rem;
+  color: var(--color-gold);
+}
+
+.service-area-secondary {
+  padding: 0.15rem 0 0.15rem clamp(1.75rem, 4vw, 3.5rem);
+  border-left: 2px solid rgba(199, 163, 76, 0.72);
+}
+
+.service-area-label {
+  margin: 0 0 0.7rem;
+  color: #f2ead5;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.service-area-states {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.service-area-states span {
+  margin: 0 0.28rem;
+  color: var(--color-gold);
+}
+
+.service-area-note {
+  margin: 0.65rem 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .service-area-band {
+    padding: 3rem 0;
+  }
+
+  .service-area-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .service-area-secondary {
+    padding: 1.5rem 0 0;
+    border-left: 0;
+    border-top: 2px solid rgba(199, 163, 76, 0.72);
+  }
+}
