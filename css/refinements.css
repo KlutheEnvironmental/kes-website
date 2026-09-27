@@ -938,3 +938,22 @@ html {
 .text-link:hover {
   transform: translateX(2px);
 }
+
+
+/* ========================================
+   SOIL & CROP MANAGEMENT PAGE
+   ======================================== */
+
+.soil-crop-page .service-detail-main {
+  padding-top: 2.6rem;
+}
+
+.soil-crop-page .service-detail-accordions {
+  margin-top: 0;
+}
+
+@media (max-width: 650px) {
+  .soil-crop-page .service-detail-main {
+    padding-top: 2.25rem;
+  }
+}
