@@ -946,6 +946,7 @@ html {
 
 .soil-crop-page .service-detail-main {
   padding-top: 2.6rem;
+  padding-bottom: 3.4rem;
 }
 
 .soil-crop-page .service-detail-accordions {
@@ -955,5 +956,6 @@ html {
 @media (max-width: 650px) {
   .soil-crop-page .service-detail-main {
     padding-top: 2.25rem;
+    padding-bottom: 3rem;
   }
 }
